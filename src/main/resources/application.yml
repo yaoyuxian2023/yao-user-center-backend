@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: yao-user-center
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yao-user-center
+    username: root
+    password: 6825
+
+server:
+  port: 8088
