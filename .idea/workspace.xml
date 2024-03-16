@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432663ad-df99-43a8-9964-107baf21cf2c" name="Changes" comment="删除 MyBatis 测试示例">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/model/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yaoyx/service/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yao-user-center-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58a96edf-61b5-4258-8638-7bd37ffd5b8d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58a96edf-61b5-4258-8638-7bd37ffd5b8d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="432663ad-df99-43a8-9964-107baf21cf2c" name="Changes" comment="进行登录功能（未完），测试添加用户功能成功，jdk版本修改为1.8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/YaoUserCenterBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/YaoUserCenterBackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yaoyx/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yaoyx/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +59,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/source_code/xingqiu/user-center/user-center-backend",
+    "last_opened_file_path": "D:/source_code/xingqiu/yao-user-center/yao-user-center-backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,7 +89,7 @@
       <recent name="com.yaoyx.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.testAddUser">
+  <component name="RunManager" selected="JUnit.UserServiceTest.userRegister">
     <configuration name="SampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yao-user-center-backend" />
       <extension name="coverage">
@@ -150,6 +137,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceTest.userRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yao-user-center-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yaoyx.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yaoyx.service" />
+      <option name="MAIN_CLASS_NAME" value="com.yaoyx.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="userRegister" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="YaoUserCenterBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="yao-user-center-backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yaoyx.YaoUserCenterBackendApplication" />
@@ -159,6 +162,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceTest.userRegister" />
         <item itemvalue="JUnit.UserServiceTest.testAddUser" />
         <item itemvalue="JUnit.SampleTest" />
         <item itemvalue="JUnit.SampleTest.testSelect" />
@@ -178,7 +182,8 @@
       <workItem from="1710483146165" duration="4589000" />
       <workItem from="1710488893187" duration="3305000" />
       <workItem from="1710492295372" duration="922000" />
-      <workItem from="1710493269255" duration="8285000" />
+      <workItem from="1710493269255" duration="8429000" />
+      <workItem from="1710554282392" duration="4769000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1710485238694</created>
@@ -201,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710489308038</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="进行登录功能（未完），测试添加用户功能成功，jdk版本修改为1.8">
+      <created>1710508315667</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710508315667</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +235,19 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Initial commit1" />
     <MESSAGE value="删除 MyBatis 测试示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除 MyBatis 测试示例" />
+    <MESSAGE value="进行登录功能（未完），测试添加用户功能成功，jdk版本修改为1.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="进行登录功能（未完），测试添加用户功能成功，jdk版本修改为1.8" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/yaoyx/service/UserServiceTest.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

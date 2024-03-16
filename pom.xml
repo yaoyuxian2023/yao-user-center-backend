@@ -32,6 +32,7 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.1</version>
         </dependency>
+        <!--Apache common lang-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -81,6 +82,7 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.1</version>
         </dependency>
+
     </dependencies>
 
     <build>
