@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432663ad-df99-43a8-9964-107baf21cf2c" name="Changes" comment="进行登录功能（未完），测试添加用户功能成功，jdk版本修改为1.8">
+    <list default="true" id="432663ad-df99-43a8-9964-107baf21cf2c" name="Changes" comment="完成注册功能业务逻辑，并完成注册功能测试">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/contant/UserConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/model/domain/request/UserLoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/model/domain/request/UserRegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58a96edf-61b5-4258-8638-7bd37ffd5b8d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58a96edf-61b5-4258-8638-7bd37ffd5b8d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/model/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yaoyx/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yaoyx/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +26,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
         <option value="JUnit5 Test Class" />
+        <option value="HTTP Public Environment File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-tests.http" environment="test" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,6 +68,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -72,7 +88,7 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
+    "settings.editor.selected.configurable": "Errors",
     "spring.configuration.checksum": "f368585cdc5f40f99c9cfa38c65fef9c"
   },
   "keyToStringList": {
@@ -88,70 +104,25 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.yaoyx.service" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yaoyx.model.domain.request" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.userRegister">
-    <configuration name="SampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yao-user-center-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yaoyx.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yaoyx" />
-      <option name="MAIN_CLASS_NAME" value="com.yaoyx.SampleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Spring Boot.YaoUserCenterBackendApplication">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="SampleTest.testSelect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yao-user-center-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yaoyx.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yaoyx" />
-      <option name="MAIN_CLASS_NAME" value="com.yaoyx.SampleTest" />
-      <option name="METHOD_NAME" value="testSelect" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest.testAddUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yao-user-center-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yaoyx.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yaoyx.service" />
-      <option name="MAIN_CLASS_NAME" value="com.yaoyx.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testAddUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest.userRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yao-user-center-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yaoyx.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yaoyx.service" />
-      <option name="MAIN_CLASS_NAME" value="com.yaoyx.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="userRegister" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="generated-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="4" requestIdentifier="#4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="YaoUserCenterBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="yao-user-center-backend" />
@@ -162,10 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceTest.userRegister" />
-        <item itemvalue="JUnit.UserServiceTest.testAddUser" />
-        <item itemvalue="JUnit.SampleTest" />
-        <item itemvalue="JUnit.SampleTest.testSelect" />
+        <item itemvalue="HTTP Request.generated-requests | #3" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.generated-requests | #4" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="HTTP Request.rest-api | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +155,10 @@
       <workItem from="1710488893187" duration="3305000" />
       <workItem from="1710492295372" duration="922000" />
       <workItem from="1710493269255" duration="8429000" />
-      <workItem from="1710554282392" duration="4769000" />
+      <workItem from="1710554282392" duration="5502000" />
+      <workItem from="1710651696826" duration="3364000" />
+      <workItem from="1710655380188" duration="888000" />
+      <workItem from="1710656321279" duration="10624000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1710485238694</created>
@@ -213,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710508315667</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成注册功能业务逻辑，并完成注册功能测试">
+      <created>1710559433690</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710559433690</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,18 +218,8 @@
     <MESSAGE value="Initial commit1" />
     <MESSAGE value="删除 MyBatis 测试示例" />
     <MESSAGE value="进行登录功能（未完），测试添加用户功能成功，jdk版本修改为1.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="进行登录功能（未完），测试添加用户功能成功，jdk版本修改为1.8" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/yaoyx/service/UserServiceTest.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="完成注册功能业务逻辑，并完成注册功能测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成注册功能业务逻辑，并完成注册功能测试" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

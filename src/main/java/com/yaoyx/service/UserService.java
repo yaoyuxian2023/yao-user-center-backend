@@ -3,6 +3,8 @@ package com.yaoyx.service;
 import com.yaoyx.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 用户服务
  *
@@ -21,4 +23,21 @@ public interface UserService extends IService<User> {
      * @return 新用户ID
      */
     long userRegister(String userAccount, String userPassword, String checkPassword);
+
+    /**
+     * 用户登录
+     *
+     * @param userAccount 用户账户
+     * @param userPassword 用户密码
+     * @return 脱敏后的用户信息
+     */
+    User userLogin(String userAccount, String userPassword, HttpServletRequest request);
+
+    /**
+     * 用户脱敏
+     *
+     * @param originUser
+     * @return
+     */
+    User getSafetyUser(User originUser);
 }
