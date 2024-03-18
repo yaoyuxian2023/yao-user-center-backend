@@ -54,7 +54,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         }
         if (userAccount.length() < 4) {
             return -1;
-        }
+        } 
         if (userPassword.length() < 8 || checkPassword.length() < 8) {
             return -1;
         }
@@ -164,6 +164,18 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
         return safetyUser;
 
+    }
+
+    /**
+     * 用户注销
+     *
+     * @param request 用户登录态请求
+     */
+    @Override
+    public int userLogout(HttpServletRequest request) {
+        // 移除登录态
+        request.getSession().removeAttribute(USER_LOGIN_STATE);
+        return 1;
     }
 }
 

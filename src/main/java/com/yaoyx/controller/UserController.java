@@ -63,6 +63,17 @@ public class UserController {
     }
 
     /**
+     * 用户注销
+     */
+    @PostMapping("/logout")
+    public Integer userLogout(HttpServletRequest request) {
+        if (request == null) {
+            return null;
+        }
+        return userService.userLogout(request);
+    }
+
+    /**
      * 获取用户登录态
      */
     @GetMapping("/current")
