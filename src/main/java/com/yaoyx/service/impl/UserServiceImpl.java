@@ -142,11 +142,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     /**
      * 用户脱敏
      *
-     * @param originUser
-     * @return
+     * @param originUser 未脱敏的用户信息
+     * @return 脱敏后的用户信息
      */
     @Override
     public User getSafetyUser(User originUser) {
+        if (originUser == null) {
+            return null;
+        }
         User safetyUser = new User();
         safetyUser.setId(originUser.getId());
         safetyUser.setUsername(originUser.getUsername());

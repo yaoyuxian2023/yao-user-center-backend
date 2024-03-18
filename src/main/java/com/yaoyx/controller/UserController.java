@@ -31,9 +31,6 @@ public class UserController {
 
     /**
      * 用户注册
-     *
-     * @param userRegisterRequest 用户注册请求
-     * @return
      */
     @PostMapping("/register")
     public Long userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
@@ -51,10 +48,6 @@ public class UserController {
 
     /**
      * 用户登录
-     *
-     * @param userLoginRequest 用户登录请求
-     * @param request
-     * @return
      */
     @PostMapping("/login")
     public User userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) {
@@ -69,6 +62,26 @@ public class UserController {
         return userService.userLogin(userAccount, userPassword, request);
     }
 
+    /**
+     * 获取用户登录态
+     */
+    @GetMapping("/current")
+    public User getCurrentUser(HttpServletRequest request) {
+        Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
+        User currentUser = (User) userObj;
+        if (currentUser != null) {
+            return null;
+        }
+        // 信息频繁变化，建议查库；反之则利用缓存
+        long userId = currentUser.getId();
+        // todo 校验用户是否合法
+        User user = userService.getById(userId);
+        return userService.getSafetyUser(user);
+    }
+
+    /**
+     * 查询用户名
+     */
     @GetMapping("/search")
     public List<User> searchUsers(String username, HttpServletRequest request) {
         // 鉴权：仅管理员可查询
@@ -83,6 +96,9 @@ public class UserController {
         return userList.stream().map(user -> userService.getSafetyUser(user)).collect(Collectors.toList());
     }
 
+    /**
+     * 删除用户
+     */
     @PostMapping("/delete")
     public boolean deleteUser(@RequestBody long id, HttpServletRequest request) {
         if (!isAdmin(request)) {
@@ -96,9 +112,6 @@ public class UserController {
 
     /**
      * 是否为管理员
-     *
-     * @param request
-     * @return
      */
     private boolean isAdmin(HttpServletRequest request) {
         // 仅管理员可查询
