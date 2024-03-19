@@ -3,6 +3,8 @@ import java.time.LocalDateTime;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yaoyx.common.ErrorCode;
+import com.yaoyx.exception.BusinessException;
 import com.yaoyx.model.domain.User;
 import com.yaoyx.service.UserService;
 import com.yaoyx.mapper.UserMapper;
@@ -50,17 +52,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
         // 1. 校验
         if (StringUtils.isAllBlank(userAccount, userPassword, checkPassword, planetCode)) {
-            // todo 修改为自定义异常
-            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "参数为空");
         }
         if (userAccount.length() < 4) {
-            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户账号过短");
         } 
         if (userPassword.length() < 8 || checkPassword.length() < 8) {
-            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户密码过短");
         }
         if (planetCode.length() > 5) {
-            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "星球编号过长");
         }
         // 校验账户不包含特殊字符
         String validPattern = "[`~!@#$%^&*()+=|{}':;',\\\\[\\\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";

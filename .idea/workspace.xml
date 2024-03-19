@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432663ad-df99-43a8-9964-107baf21cf2c" name="Changes" comment="增加用户校验功能、增加星球编号字段，仅有编号的用户可以使用">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/BaseResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/ResultUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58a96edf-61b5-4258-8638-7bd37ffd5b8d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58a96edf-61b5-4258-8638-7bd37ffd5b8d.xml" afterDir="false" />
+    <list default="true" id="432663ad-df99-43a8-9964-107baf21cf2c" name="Changes" comment="通用返回对象">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/BaseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/ResultUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/ResultUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,7 @@
       <recent name="com.yaoyx.model.domain.request" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.userRegister">
+  <component name="RunManager" selected="Spring Boot.YaoUserCenterBackendApplication">
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -169,7 +172,7 @@
       <workItem from="1710718979866" duration="3811000" />
       <workItem from="1710738546637" duration="135000" />
       <workItem from="1710738732990" duration="4970000" />
-      <workItem from="1710812343194" duration="2461000" />
+      <workItem from="1710812343194" duration="9169000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1710485238694</created>
@@ -234,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710756449630</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="通用返回对象">
+      <created>1710815076355</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710815076355</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +272,8 @@
     <MESSAGE value="获取用户登录态接口" />
     <MESSAGE value="用户注销接口" />
     <MESSAGE value="增加用户校验功能、增加星球编号字段，仅有编号的用户可以使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加用户校验功能、增加星球编号字段，仅有编号的用户可以使用" />
+    <MESSAGE value="通用返回对象" />
+    <option name="LAST_COMMIT_MESSAGE" value="通用返回对象" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

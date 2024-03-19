@@ -2,7 +2,9 @@ package com.yaoyx.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yaoyx.common.BaseResponse;
+import com.yaoyx.common.ErrorCode;
 import com.yaoyx.common.ResultUtils;
+import com.yaoyx.exception.BusinessException;
 import com.yaoyx.model.domain.User;
 import com.yaoyx.model.domain.request.UserLoginRequest;
 import com.yaoyx.model.domain.request.UserRegisterRequest;
@@ -37,7 +39,7 @@ public class UserController {
     @PostMapping("/register")
     public BaseResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
         if (userRegisterRequest == null) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         String userAccount = userRegisterRequest.getUserAccount();
         String userPassword = userRegisterRequest.getUserPassword();
@@ -105,8 +107,7 @@ public class UserController {
     public BaseResponse<List<User>> searchUsers(String username, HttpServletRequest request) {
         // 鉴权：仅管理员可查询
         if (!isAdmin(request)) {
-//            return new ArrayList<>();
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         if (StringUtils.isNotBlank(username)) {
