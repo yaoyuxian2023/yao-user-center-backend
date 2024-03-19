@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432663ad-df99-43a8-9964-107baf21cf2c" name="Changes" comment="通用返回对象">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/ErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/exception/BusinessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/BaseResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/ResultUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/common/ResultUtils.java" afterDir="false" />
+    <list default="true" id="432663ad-df99-43a8-9964-107baf21cf2c" name="Changes" comment="全局异常处理器">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yaoyx/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
@@ -172,7 +166,7 @@
       <workItem from="1710718979866" duration="3811000" />
       <workItem from="1710738546637" duration="135000" />
       <workItem from="1710738732990" duration="4970000" />
-      <workItem from="1710812343194" duration="9169000" />
+      <workItem from="1710812343194" duration="10052000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1710485238694</created>
@@ -244,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710815076355</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="全局异常处理器">
+      <created>1710835484183</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710835484183</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +274,8 @@
     <MESSAGE value="用户注销接口" />
     <MESSAGE value="增加用户校验功能、增加星球编号字段，仅有编号的用户可以使用" />
     <MESSAGE value="通用返回对象" />
-    <option name="LAST_COMMIT_MESSAGE" value="通用返回对象" />
+    <MESSAGE value="全局异常处理器" />
+    <option name="LAST_COMMIT_MESSAGE" value="全局异常处理器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

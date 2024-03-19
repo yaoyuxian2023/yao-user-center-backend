@@ -46,7 +46,7 @@ public class UserController {
         String checkPassword = userRegisterRequest.getCheckPassword();
         String planetCode = userRegisterRequest.getPlanetCode();
         if (StringUtils.isAllBlank(userAccount, userPassword, checkPassword, planetCode)) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         long result = userService.userRegister(userAccount, userPassword, checkPassword, planetCode);
         return ResultUtils.success(result);
@@ -58,12 +58,12 @@ public class UserController {
     @PostMapping("/login")
     public BaseResponse<User> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) {
         if (userLoginRequest == null) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         String userAccount = userLoginRequest.getUserAccount();
         String userPassword = userLoginRequest.getUserPassword();
         if (StringUtils.isAllBlank(userAccount, userPassword)) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         User user = userService.userLogin(userAccount, userPassword, request);
         return ResultUtils.success(user);
@@ -75,7 +75,7 @@ public class UserController {
     @PostMapping("/logout")
     public BaseResponse<Integer> userLogout(HttpServletRequest request) {
         if (request == null) {
-            return null;
+            throw new BusinessException(ErrorCode.NULL_ERROR);
         }
         int result = userService.userLogout(request);
         return ResultUtils.success(result);
@@ -89,7 +89,7 @@ public class UserController {
         Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
         User currentUser = (User) userObj;
         if (currentUser != null) {
-            return null;
+            throw new BusinessException(ErrorCode.NOT_LOGIN);
         }
         // 信息频繁变化，建议查库；反之则利用缓存
         long userId = currentUser.getId();
@@ -124,10 +124,10 @@ public class UserController {
     @PostMapping("/delete")
     public BaseResponse<Boolean> deleteUser(@RequestBody long id, HttpServletRequest request) {
         if (!isAdmin(request)) {
-            return null;
+            throw new BusinessException(ErrorCode.NO_AUTH);
         }
         if (id <= 0) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         boolean id1 = userService.removeById(id);
         return ResultUtils.success(id1);
