@@ -1,0 +1,13 @@
+# 线上配置文件
+spring:
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://gz-cynosdbmysql-grp-3qfar54p.sql.tencentcdb.com:20119/user-center?useSSL=false'
+    username: self
+    password: xiaoXian718!
+  # session 失效时间
+  session:
+    timeout: 86400
+server:
+  address: 0.0.0.0

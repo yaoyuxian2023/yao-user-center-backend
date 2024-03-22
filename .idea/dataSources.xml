@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://localhost:3306/yao-usercenter</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="user-center@gz-cynosdbmysql-grp-3qfar54p.sql.tencentcdb.com" uuid="7bb0bd65-fab5-4b41-8649-bdc5a79e6914">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://gz-cynosdbmysql-grp-3qfar54p.sql.tencentcdb.com:20119/user-center</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
