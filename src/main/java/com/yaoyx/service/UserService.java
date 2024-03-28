@@ -4,6 +4,7 @@ import com.yaoyx.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 用户服务
@@ -49,4 +50,12 @@ public interface UserService extends IService<User> {
      * @return 用户注销的状态码
      */
     int userLogout(HttpServletRequest request);
+
+    /**
+     * 根据标签查询用户
+     *
+     * @param tagsNameList 用户想要拥有的标签
+     * @return
+     */
+    List<User> searchUsersByTags(List<String> tagsNameList);
 }

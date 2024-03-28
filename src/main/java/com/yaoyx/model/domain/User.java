@@ -46,6 +46,11 @@ public class User implements Serializable {
     private String userPassword;
 
     /**
+     * 用户标签
+     */
+    private String tags;
+
+    /**
      * 电话
      */
     private String phone;
